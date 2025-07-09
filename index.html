@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>myChat</title>
+</head>
+<body class="bg-amber-600">
+    <div class="mx-auto flex flex-col bg-black h-screen max-w-5xl transition-colors duration-500" id="mainBox">
+        <header class="bg-white transition-colors duration-500" id="headerBox"> 
+            <div class="flex justify-between p-5">
+                <div class=" flex items-center gap-5">
+                    <img src="./Images/IMG-20231127-WA0003.jpg" class="w-20 h-20 border-black border-2 rounded-full">
+                    <span class=""> <h1 class="font-extrabold text-3xl tracking-wider">mySaneBox</h1>
+                        <p class="text-sm text-gray-700 mt-1">Mental Health, just a message away</p>
+                    </span>
+                </div>
+                
+                <div class="grid col-1">
+                    <button id="toggleBtn" class="text-2xl" type="click">🌙</button>
+                    <button id="clearChat" class="text-base px-2 py-1 bg-gradient-to-r from-[#ac1ed6] to-[#c26e73] text-white rounded">Clear chat</button>
+                </div>
+                
+            </div>
+        </header>
+      
+        <main class="flex-1 overflow-y-auto p-6 space-y-4">
+            <div class="p-6 space-y-4 flex-1 overflow-y-auto">
+                 <div class="bg-white rounded-lg py-3 px-5 w-fit ml-auto text-base max-w-lg  bg-gradient-to-r from-[#ac1ed6] to-[#c26e73] p-6 text-white">Hello!</div>
+                 <div class="py-3 px-5 rounded-lg text-base max-w-lg w-fit rounded-xl bg-[#221f20] text-white">Hi there!  👋</div> 
+                 <div class="py-3 px-5 rounded-lg text-base max-w-lg w-fit rounded-xl bg-[#221f20] text-white ">How may I help you, today?</div> 
+                
+            </div>
+
+            <div class="p-6 space-y-4 flex-1 overflow-y-auto" id="chatSpace"></div>
+        </main>
+
+         <form class="flex items-center p-4 bg-black border-t rounded-b-lg" id="chatForm">
+                <input type="text" id="chat-box" class="flex-1 p-3 rounded-full border  focus:outline-none text-base" placeholder="Type a message...">
+                <button class="ml-2 px-5 py-2  bg-gradient-to-r from-[#ac1ed6] to-[#c26e73] text-white rounded-full transition"id="sendBtn" type="send">Send</button>
+        </form>
+    </div>
+  <script src="index.js"></script>  
+</body>
+</html>
